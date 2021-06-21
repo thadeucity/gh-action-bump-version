@@ -142,7 +142,7 @@ Toolkit.run(async (tools) => {
       await tools.runInWorkspace('git', ['push', remoteRepo, '--follow-tags']);
       await tools.runInWorkspace('git', ['push', remoteRepo, '--tags']);
     } else {
-      await tools.runInWorkspace('git', ['push', remoteRepo]);
+      await tools.runInWorkspace('git', ['push', '--force', remoteRepo]);
     }
   } catch (e) {
     tools.log.fatal(e);
